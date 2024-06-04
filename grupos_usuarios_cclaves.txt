@@ -1,0 +1,652 @@
+grupos
+ 
+Admin
+Clientes
+Empleados
+Gerencia
+Productos
+RRHH
+Ventas
+TecGestionComercial
+TecGestionDepartamentos
+TecGestionProductos
+TecGestionVentas
+
+
+cuenta email
+
+cuenta django email: nachoDamDjango@gmail.com
+contraseña: damdjango150
+
+
+usuarios 
+
+nombre: nacho
+contraseña: 12345
+email: nacho@mail.com
+nombre: nacho
+apellidos: cortes lavin
+activo: true
+staff: true
+superuser: true
+grupos: todos
+
+
+nombre: luis
+contraseña: contraseña
+email: luis@mail.com
+nombre: Luis
+apellidos: Ruiz Lopez
+activo: true
+staff: true
+superuser: true
+puesto: Gerente
+grupos: empleados, gerencia
+
+
+nombre: Pepe
+contraseña: contraseña
+email: pepe@mail.com
+nombre: Pepe
+apellidos: Ruiz Lopez
+activo: true
+staff: true
+superuser: false
+puesto: DirectorRRHH
+grupos: empleados , RRHH
+
+
+nombre: raul
+contraseña: contraseña
+email: raul@mail.com
+nombre: Raul
+apellidos: Ruiz Lopez
+activo: true
+staff: true
+superuser: false
+puesto: DirectorProductos
+grupos: empleados, productos
+
+
+nombre: fidel
+contraseña: contraseña
+email: fidel@mail.com
+nombre: Fidel
+apellidos: Ruiz Lopez
+activo: true
+staff: true
+superuser: false
+puesto: DirectorVentas
+grupos: empleados, ventas
+
+
+nombre: juan
+contraseña: contraseña
+email: juan@mail.com
+nombre: Juan
+apellidos: Ruiz Lopez
+activo: true
+staff: true
+superuser: true
+puesto: DirectorAdmin
+grupos: empleados, admin
+
+
+nombre: hugo
+contraseña: contaseña
+email: hugo@mail.com
+nombre: hugo
+apellidos: ruiz perez
+activo: true
+staff: true
+superuser: true
+puesto: TecGestionAdmin
+grupos: admin, TecGestionAdmin
+
+
+nombre: carlos
+contraseña: contraseña
+email: carlos@mail.com
+nombre: Carlos
+apellidos: Ruiz Lopez
+activo: true
+staff: true
+superuser: false
+puesto: TecGestionDepartamentos
+grupos: empleados, TecGestionDepartamentos
+
+
+nombre: ramon
+contraseña: contraseña
+email: ramon@mail.com
+nombre: Ramon
+apellidos: Ruiz Lopez
+activo: true
+staff: true
+superuser: false
+puesto: TecGestionComercial
+grupos: empleados, TecGestionComercial
+
+
+nombre: saul
+contraseña: contraseña
+email: saul@mail.com
+nombre: Saul
+apellidos: Ruiz Lopez
+activo: true
+staff: true
+superuser: false
+puesto: TecGestionProductos
+grupos: empleados, TecGestionProductos
+
+
+nombre: fran
+contraseña: contraseña
+email: fran@mail.com
+nombre: Fran
+apellidos: Ruiz Lopez
+activo: true
+staff: true
+superuser: false
+puesto: TecGestionventas
+grupos: empleados, TecGestionVentas
+
+
+
+
+departamentos
+
+nombre: Gerencia 
+telefono: 945121212
+encargado: luis
+
+nombre: Ventas
+telefono: 945121215
+encargado: fidel
+
+nombre: RRHH 
+telefono: 945121213
+encargado: pepe
+
+nombre: Productos 
+telefono: 945121214
+encargado: raul
+
+nombre: Admin 
+telefono: 945121216
+encargado: nacho
+
+5
+
+Puestostrbajo
+
+nombre: Gerente
+Departamento: Gerencia
+
+nombre: DirectorRRHH
+Departamento: RRHH
+
+nombre: DirectorProductos
+Departamento: Productos
+
+nombre: DirectorVentas
+Departamento: Ventas
+
+nombre: DirectorAdmin
+Departamento: admin
+
+nombre: TecGestionAdmin
+Departamento: Ventas
+
+nombre: TecGestionComercial
+Departamento: Ventas
+
+nombre: TecGestionProductos
+Departamento: Productos
+
+nombre: TecGestionVentas
+Departamento: Ventas
+
+nombre: TecGestionRRHH
+Departamento: RRHH
+
+10
+
+empleados
+
+dept: Gerencia
+puesto: Gerente
+nombre: Luis
+apellidos:Ruiz Perez
+dni: 18556743J
+email: luis@mail.com
+
+
+dept: Ventas
+puesto: DirectorVentas
+nombre: Fidel
+apellidos: Ruiz Perez
+dni: 18343456D
+mail: fidel@mail.com
+
+
+dept: Admin
+puesto: DirectorAdmin
+nombre: Juan
+apellidos: Ruiz Perez
+dni: 44211343F
+mail: juan@mail.com
+
+
+dept: Productos
+puesto: DirectorProductos
+nombre: Raul
+apellidos: Ruiz Perez
+dni: 44987123C
+mail: raul@mail.com
+
+
+dept: RRHH
+puesto: DirectorRRHH
+nombre: Pepe
+apellidos: Ruiz Perez
+dni: 184356768E
+mail: pepe@mail.com
+
+
+dept: Productos
+puesto: TecGestionProductos
+nombre: Saul
+apellidos: Ruiz Perez
+dni: 44123678T
+mail: saul@mail.com
+
+
+dept: Ventas
+puesto: TecGestionVentas
+nombre: Fran
+apellidos: Ruiz Perez
+dni: 13564768L
+mail: fran@mail.com
+
+
+dept: RRHH
+puesto: TecGestionRRHH
+nombre: Carlos
+apellidos: Ruiz Perez
+dni: 44678987M
+mail: carlos@mail.com
+
+
+dept: admin
+puesto: TecGestionAdmin
+nombre: Hugo
+apellidos: Ruiz Perez
+dni: 44678654H
+mail: hugo@mail.com
+
+
+dept: Ventas
+puesto: TecGestionComercial
+nombre: Ramon
+apellidos: Ruiz Perez
+dni: 44324123L
+mail: ramon@mail.com
+
+
+
+
+
+Productos
+
+
+
+Categorias
+
+
+Camisas
+Chaquetas
+Corbatas
+Jerseys
+Polos
+Trajes
+
+
+Productos
+
+Camisas
+
+camisa 1
+Camisa temporada 2024
+Blanco
+59,99
+4
+
+camisa 2
+Camisa temporada 2024
+Azul
+59,99
+5
+
+
+camisa 3
+Camisa temporada 2024
+Amarillo
+69,99
+6
+
+
+camisa 4
+Camisa temporada 2024
+Gris
+78,54
+3
+
+
+camisa 5
+Camisa temporada 2024
+Marino
+69,99
+4
+
+
+camisa 6
+Camisa temporada 2024
+Gris
+46,98
+2
+
+
+camisa 7
+Camisa temporada 2024
+Azul-claro
+54,87
+5
+
+
+camisa 8
+Camisa temporada 2024
+Marino
+57,96
+4
+
+
+camisa 9
+Camisa temporada 2024
+Rojo
+65,87
+2
+
+
+camisa 10
+Camisa temporada 2024
+Azul-claro
+54,87
+5
+
+
+camisa 11
+Camisa temporada 2024
+Granate
+44,98
+6
+
+
+camisa 12
+Camisa temporada 2024
+Azul-claro
+67,99
+3
+
+
+camisa 13
+Camisa temporada 2024
+Blanco
+69,99
+5
+
+
+camisa 14
+Camisa temporada 2024
+Gris
+56,99
+2
+
+
+camisa 15
+Camisa temporada 2024
+Azul
+59,99
+5
+
+
+camisa 16
+Camisa temporada 2024
+Azul
+69,99
+3
+
+
+camisa 17
+Camisa temporada 2024
+Negro
+47,95
+5
+
+
+
+
+chaqueta 1
+Chaqueta temporada 2024
+Gris
+102,99
+2
+
+
+chaqueta 2
+Chaqueta temporada 2024
+Negro
+119,8
+4
+
+
+chaqueta 3
+Chaqueta temporada 2024
+Verde
+129,99
+2
+
+
+chaqueta 4
+Chaqueta temporada 2024
+Azul
+129,99
+2
+
+
+
+chaqueta 5
+Chaqueta temporada 2024
+Negro
+129,99
+2
+
+
+corbata 1
+Corbata temporada 2024
+Negro
+24,67
+5
+
+
+corbata 2
+Corbata temporada 2024
+Gris
+23,99
+7
+
+
+corbata 3
+Corbata temporada 2024
+Gris
+22,99
+8
+
+corbata 4
+Corbata temporada 2024
+Granate
+26,87
+5
+
+
+corbata 5
+Corbata temporada 2024
+Negro
+23,99
+6
+
+
+jersey 1
+Jersey temporada 2024
+Negro
+67,99
+3
+
+
+jersey 2
+Jersey temporada 2024
+Azul
+78,99
+2
+
+
+jersey 3
+Jersey temporada 2024
+Verde
+72,97
+2
+
+
+pantalon 1
+Pantalón temporada 2024
+Rojo
+45,99
+
+
+pantalon 2
+Pantalón temporada 2024
+orange
+87,99
+1
+
+
+pantalon 3
+Pantalón temporada 2024
+Gris
+89,99
+1
+
+
+polo 1
+Polo temporada 2024
+Rojo
+45,99
+2
+
+
+polo 2
+Polo temporada 2024
+Blanco
+34,99
+7
+
+
+polo 3
+Polo temporada 2024
+Negro
+44,88
+2
+
+
+polo 4
+Polo temporada 2024
+Negro
+38,99
+3
+
+
+polo 5
+Polo temporada 2024
+Azul
+56,99
+2
+
+
+polo 6
+Polo temporada 2024
+Azul
+56,99
+2
+
+
+polo 7
+Polo temporada 2024
+Blanco
+56,99
+3
+
+
+polo 8
+Polo temporada 2024
+Azul
+56,99
+2
+
+
+traje 1
+Traje temporada 2024
+Gris
+250,98
+2
+
+
+traje 2
+Traje temporada 2024
+Gris
+267,99
+2
+
+
+traje 3
+Traje temporada 2024
+Rojo
+302,99
+1
+
+
+traje 4
+Traje temporada 2024
+Verde
+302,99
+1
+
+
+traje 5
+Traje temporada 2024
+Negro
+355,99
+2
+
+
+traje 6
+Traje temporada 2024
+Marino
+355,99
+2
+
+
+traje 7
+Traje temporada 2024
+Negro
+425,99
+1

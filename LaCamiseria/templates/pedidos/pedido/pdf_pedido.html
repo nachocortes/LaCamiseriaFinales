@@ -1,0 +1,109 @@
+{% include 'store/include_base_tienda/head.html' %}
+{% load static %}
+{% block title %}Pdf pedido {% endblock %}
+{% block content %}
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-xs-10 ">
+                <h1>Factura</h1>
+            </div>
+            <div class="col-xs-2 text-center">
+                <img class="img img-responsive" src="{% static 'img/7camice.png' %}" alt="Logotipo">
+            </div>
+        </div>
+        <div class="row">
+            <div class="col">
+                <div class="row ml-4">
+                    <div class="col-xs-10  text-start mb-5">
+                        <h1 class="h2">Empresa</h1>
+                        <h1 class="h6"><strong>7 Camice</strong></h1>
+                        <h1 class="h6"><strong>https://LaCamiseia.com</strong></h1>
+                    </div>
+                    <div class="col-xs-2">
+                        <h5>Fecha {{ pedido.created }}</h5>
+                        <h5>Factura No. {{ pedido.id }}</h5>
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="row text-end mr-4" style="margin-bottom: 2rem;">
+                    <div class="col-xs-6">
+                        <h1 class="h2">Cliente</h1>
+                        <h5>Nombre <strong>{{ pedido.nombre }} {{ pedido.apellidos }}</strong></h5>
+                        <h5>Username <strong>{{ user.username }}</strong></h5>
+                        <h5>Email <strong>{{ pedido.email }}</strong></h5>
+                        <h5>Telefono <strong>{{ pedido.telefono }}</strong></h5>
+                        <h5>Direccion <strong>{{ pedido.direccion }}</strong></h5>
+                        <h5>Codigo postal <strong>{{ pedido.codigo_postal }}</strong></h5>
+                        <h5>Ciudad <strong>{{ pedido.ciudad }}</strong></h5>
+                        <h5>Provincia <strong>{{ pedido.provincia }}</strong></h5>
+                        <h5>Pais <strong>{{ pedido.pais }}</strong></h5>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-xs-12">
+                <table class="table table-condensed table-bordered table-striped">
+                    <thead>
+                    <tr>
+                        <th>Ref</th>
+                        <th>Producto</th>
+                        <th>Descripción</th>
+                        <th>Color</th>
+                        <th>Cantidad</th>
+                        <th>Precio unitario</th>
+                        <th>Total</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    {% for item in pedido_items %}
+                        <tr>
+                            <td>{{ item.producto.id }}</td>
+                            <td>{{ item.producto.nombre }}</td>
+                            <td>{{ item.producto.descripcion }}</td>
+                            <td>{{ item.producto.color }}</td>
+                            <td>{{ item.cantidad }}</td>
+                            <td>{{ item.precio }}</td>
+                            <td>{{ item.obtener_coste }}</td>
+                        </tr>
+                    {% endfor %}
+                    </tbody>
+                    <tfoot>
+                    <tr>
+                        <td colspan="6" class="text-right">Subtotal</td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td colspan="6" class="text-right">Descuento</td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td colspan="6" class="text-right">Subtotal con descuento</td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td colspan="6" class="text-right">Impuestos</td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td colspan="6" class="text-right">
+                            <h4><strong>Total</strong></h4>
+                        </td>
+                        <td>
+                            <h4><strong>{{ pedido.obtener_total_coste }}€</strong></h4>
+                        </td>
+                    </tr>
+                    </tfoot>
+                </table>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-xs-12 text-center">
+                <p class="h5">Gracias por su compra</p>
+            </div>
+        </div>
+    </div>
+{% endblock %}
+{% include 'store/include_base_tienda/scripts_base_tienda.html' %}

@@ -1,0 +1,42 @@
+{% extends 'layout.html' %}
+{% load static %}
+{% block title %}Pedidos{% endblock %}
+{% block cuerpo %}
+    <a href="{% url 'store:inicioStore' %}" class="btn btn-outline-info ml-5"><i
+                        class="fa fa-arrow-left"></i> Volver</a>
+    <div class="container">
+        {% if tiene_pedidos %} 
+            <h2>Mis pedidos</h2>
+            <table class="table-container">
+                <div class="order-info">
+                    <h2 class="mt-3 text-center">Pedidos</h2>
+                    <table class="table mb-5 mt-5">
+                        <thead class="thead-dark">
+                        <tr>
+                            <th></th>
+                            <th>Numero pedido</th>
+                            <th>Fecha Pedido</th>
+                            <th>Importe</th>
+                            <th>Pedido</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        {% for pedido in pedidos %}
+                            <tr>
+                                <td></td>
+                                <td>{{ pedido.id }}</td>
+                                <td>{{ pedido.created }}</td>
+                                <td>{{ pedido.obtener_total_coste }} €</td>
+                                <td><a href="{% url 'cart:pedido_factura' pedido.id%}" class="btn   btn-outline-info">Ver pedido</a></td>
+                            </tr>
+                        {% endfor %}
+
+                        </tbody>
+                    </table>
+                </div>
+            </table>
+           {% else  %}
+            <h3>No hay pedidos</h3>
+        {% endif %}
+    </div>
+{% endblock %}

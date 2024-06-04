@@ -1,0 +1,52 @@
+{% extends "layout.html" %}
+{% load static %}
+{% block title %}Producto {{ producto.nombre }}{% endblock %}
+{% block cuerpo %}
+     <a href="{% url 'store:inicioStore' %}"
+       class="btn   btn-outline-info"><i class="fa fa-arrow-left ml-1"> Pagina principal</i></a>
+    <a href="{% url 'login' %}"
+       class="btn   btn-outline-warning mr-5"><i class="fa fa-sign-in"> Inicio sesion</i></a>
+    <div class="container mt-5">
+    <div class="container">
+        <div class="col">
+            <h1>{{ producto.nombre }}</h1>
+        </div>
+        <div class="col">
+            <div class="col-lg-6 col-md-6 col-sm-6 mb-6">
+                <div class="card" style="width: 100%">
+                    <a href="{{ producto.get_absolute_url }}" style=" color: inherit;text-decoration: none;">
+                        <img class="card-img-top" src="               
+                                
+                                {% if producto.imagen %}{{ producto.imagen.url }}{% else %}{% static "img/imagen_default.png" %}{% endif %}"
+                             alt="Imagen del producto">
+                    </a>
+                    <div class="card-body">
+                        <h3 class="card-title">Articulo: {{ producto.nombre }}</h3>
+                        <p class="card-text">Descripcion: {{ producto.descripcion }}.</p>
+                        <h5>Precio: {{ producto.precio }} €</h5>
+                    </div>
+                    <div class="card-footer">
+                        <div class="row">
+                            <div class="col-sm-5 col-md-6">
+                                <a href="{% url 'store:productoList' %}" class="btn btn-outline-info"><i
+                                        class="fa fa-arrow-left"></i> Volver</a>
+                            </div>
+                            {% if user.is_authenticated %}
+                                {% include 'productos/producto/includes_productos/botones_productos.html' %}
+                            {% else %}
+                                <div class="col-sm-5 col-md-6">
+                                    <a href="{% url 'login' %}"
+                                       class="btn btn-outline-success">Iniciar sesion</a>
+
+                                    <a href="{% url 'register' %}"
+                                       class="btn btn-outline-secondary">Registrese</a>
+                                </div>
+                            {% endif %}
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}
+

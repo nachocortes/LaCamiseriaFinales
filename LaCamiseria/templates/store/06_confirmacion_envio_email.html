@@ -1,0 +1,12 @@
+{% extends "layout.html" %}
+{% load static %}
+{% block title %}Mensaje recibido {% endblock %}
+{% block cuerpo %}
+    <a href="{% url 'store:contactoStore' %}"
+       class="btn btn-outline-info"><i class="fa fa-arrow-left"> Volver</i></a>
+    <a href="{% url 'store:inicioStore' %}"
+       class="btn btn-outline-info"><i class="fa fa-arrow-left"> Pagina principal</i></a>
+    <div class="container">
+        <h2 class="my-5 text-center">Mensaje recibido, gracias por contactar con nosotros.</h2>
+    </div>
+{% endblock %}
